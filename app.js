@@ -96,7 +96,7 @@ function stopPainting(){
     isPaint = false
 }
 
-function leavePainting(){
+function cancelPanting(){
     isPaint = false
 }
 
@@ -104,7 +104,7 @@ function leavePainting(){
 canvas.addEventListener("mousemove",mouseMoveOn)
 canvas.addEventListener("mousedown",startPainting)
 canvas.addEventListener("mouseup",stopPainting)	 
-document.addEventListener('mouseleave',leavePainting)
+document.addEventListener('mouseleave',cancelPanting)
 	 
 	 
 	 
