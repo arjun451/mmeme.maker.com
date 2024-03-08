@@ -7,8 +7,55 @@
     <title>Meme Maker</title>
 </head>
 <body>
-   
-    <canvas></canvas>
+    <div class="main">
+
+    
+    <div class="color-container">
+        <h3>Pick the brush color</h3>
+        <input id="color" type="color"/>
+        <div class="color-options" style="background-color: #191970;" data-color="#191970">
+        </div>
+        <div class="color-options" style="background-color: #0000FF;" data-color="#0000FF">
+        </div>
+        <div class="color-options" style="background-color: #FF00FF;" data-color="#FF00FF">
+        </div>
+        <div class="color-options" style="background-color: #9ACD32;" data-color="#9ACD32">
+        </div>
+        <div class="color-options" style="background-color: #14FF00;" data-color="#14FF00">
+        </div>
+        <div class="color-options" style="background-color: #DC143C;" data-color="#DC143C">
+        </div>
+        <div class="color-options" style="background-color: #FF6EAE;" data-color="#FF6EAE">
+        </div>
+        <div class="color-options" style="background-color: #0000CD;" data-color="#0000CD">
+        </div>
+        <div class="color-options" style="background-color: #491F32;" data-color="#491F32">
+        </div>
+        <div class="color-options" style="background-color: #A65FDB;" data-color="#A65FDB">
+        </div>
+        <div class="color-options" style="background-color: #685FDB;" data-color="#685FDB">
+        </div>
+        <div class="color-options" style="background-color: #D5DB5F;" data-color="#D5DB5F">
+        </div>
+        <div class="color-options" style="background-color: #DB5F97;" data-color="#DB5F97">
+        </div>
+        <div class="color-options" style="background-color: #5FDB65;" data-color="#5FDB65">
+        </div>
+        <div class="color-options" style="background-color: #5FDBA3;" data-color="#5FDBA3">
+        </div>
+        <div class="color-options" style="background-color: #33306E;" data-color="#33306E">
+        </div>
+    </div>
+    <div class="canvas-container">
+            <h1>Meme Maker</h1>
+
+        <canvas></canvas>
+    </div>
+    <div class="line-width-container">
+         <h3>Mange Brush Size</h3>
+        <input id="line-width" type="range" min="0.01" max="10" value="4" step=".1" />
+    </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
