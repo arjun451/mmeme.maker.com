@@ -89,15 +89,22 @@ function mouseMoveOn(event){
     }
     ctx.moveTo(event.offsetX,event.offsetY)
 }
-function mouseDownOn(){
+function startPainting(){
    isPaint = true
 }
-function mouseUpOn(){
+function stopPainting(){
     isPaint = false
 }
+
+function leavePainting(){
+    isPaint = false
+}
+
+
 canvas.addEventListener("mousemove",mouseMoveOn)
-canvas.addEventListener("mousedown",mouseDownOn)
-canvas.addEventListener("mouseup",mouseUpOn)	 
+canvas.addEventListener("mousedown",startPainting)
+canvas.addEventListener("mouseup",stopPainting)	 
+document.addEventListener('mouseleave',leavePainting)
 	 
 	 
 	 
