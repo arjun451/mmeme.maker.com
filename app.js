@@ -6,6 +6,7 @@ const mode = document.querySelector("#mode")
 const destroy = document.querySelector("#destroy")
 const eraseMode = document.querySelector("#erase-mode")
 const fileInput = document.querySelector("#file-input")
+const savePainting = document.querySelector("#save-painting") 
 const ctx = canvas.getContext("2d")
 
 
@@ -92,8 +93,16 @@ function handleEraseMode(){
    ctx.strokeStyle = 'white'
 }
 
+function handleSave(){
+    console.log("handle saved")
+    const url = canvas.toDataURL()
+    const a = document.createElement('a')
+    a.href = url
+    a.download = "my-painting.png";
+    a.click()
+}
 function handleFileInput(event){
-    console.log("handle file inpute",event.target.files[0] )
+    console.log("handle file input",event.target.files[0] )
     const file = event.target.files[0]
     const url =URL.createObjectURL(file)
     const image = new Image()
@@ -102,6 +111,7 @@ function handleFileInput(event){
         ctx.drawImage(image,0,0,CANVAS_WIDTH,CANVAS_HEIGHT)
     }
 }
+
 canvas.addEventListener("mousemove",mouseMoveOn)
 canvas.addEventListener("mousedown",startPainting)
 canvas.addEventListener("mouseup",stopPainting)	 
@@ -117,7 +127,7 @@ mode.addEventListener('click',modeChangeHandler)
 destroy.addEventListener("click",handleDestroy)	 
 eraseMode.addEventListener('click',handleEraseMode)
 fileInput.addEventListener('change',handleFileInput)
-
+savePainting.addEventListener("click",handleSave)
 	 
 	 
 	 
