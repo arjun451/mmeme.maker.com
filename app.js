@@ -23,6 +23,7 @@ ctx.lineWidth  = lineWidth.value
 
 function mouseMoveOn(event){
     if(isPaint){
+      
         ctx.lineTo(event.offsetX,event.offsetY)
         ctx.stroke()
         return
@@ -32,10 +33,12 @@ function mouseMoveOn(event){
 }
 
 function startPainting(){
+      canvas.classList.add("curser")
    isPaint = true
 }
 
 function stopPainting(){
+      canvas.classList.remove("curser")
     isPaint = false
 }
 
